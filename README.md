@@ -24,32 +24,54 @@ Developed by: DHANUSHA.K
 RegisterNumber:  212223040034
 */
 import numpy as np
-  import matplotlib.pyplot as plt
-  x=np.array(eval(input()))
-  y=np.array(eval(input()))
-  x_mean=np.mean(x)
-  y_mean=np.mean(y)
-  num,denum=0,0
-  for i in range(len(x)):
-    num+=(x[i]-x_mean)*(y[i]-y_mean)
-    denum+=(x[i]-x_mean)**2
-  m=num/denum
-  b=y_mean-m*x_mean
-  print("Slope=",m)
-  print("\n",b)
-  y_predicted=m*x+b
-  print(y_predicted)
-  y_predict1=m*3+b
-  print("if x=3:",y_predict1)
-  plt.scatter(x,y)
-  plt.plot(x,y_predicted,color='blue')
-  plt.show()
 
+import matplotlib.pyplot as plt
+
+X=np.array(eval(input()))
+
+Y=np.array(eval(input()))
+
+X_mean=np.mean(X)
+
+print(X_mean)
+
+Y_mean=np.mean(Y)
+
+print(Y_mean)
+
+num=0
+
+denum=0
+
+for i in range(len(X)):
+
+num+=(X[i]-X_mean)*(Y[i]-Y_mean)
+
+denum+=(X[i]-X_mean)**2
+
+m=num/denum
+
+print(m)
+
+b=Y_mean - m*X_mean
+
+print(b)
+
+Y_pred=m*X+b
+
+print(Y_pred)
+
+plt.scatter(X,Y,color='blue')
+
+plt.plot(X,Y_pred,color='yellow')
+
+plt.show()
   ```
 
 
 ## Output:
-![Screenshot 2024-02-24 091042](https://github.com/Dhanusha17/Find-the-best-fit-line-using-Least-Squares-Method/assets/151549957/2ce7e3e0-d347-4b40-8e88-b594956bb255)
+![Screenshot 2024-04-30 215724](https://github.com/Dhanusha17/Find-the-best-fit-line-using-Least-Squares-Method/assets/151549957/caa9671d-4371-4c82-a73e-d37e50ee3c82)
+
 
 
 
